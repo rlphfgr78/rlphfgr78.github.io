@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lunar Research Initiative</title>
+  <title>Lunar Research Initiative - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lunar Research Initiative develops research, standards, and tools that make lunar manufacturing safe, reliable, and mission ready.">
+  <meta name="description" content="The Lunar Research Initiative develops the quality, reliability, and manufacturing frameworks for future lunar missions.">
   <style>
     body {
       margin: 0;
@@ -13,200 +13,160 @@
       color: #111111;
       line-height: 1.6;
     }
-    .hero {
-      padding: 4rem 1.5rem 3rem;
+
+    h1, h2, h3 {
       text-align: center;
-      border-bottom: 1px solid #eee;
     }
-    .hero h1 {
-      font-size: 2.3rem;
+
+    .hero {
+      text-align: center;
+      padding: 5rem 1.5rem 3rem 1.5rem;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 800;
       margin-bottom: 1rem;
     }
-    .hero p {
-      max-width: 720px;
-      margin: 0.5rem auto;
+
+    .hero-subtitle {
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      font-size: 1rem;
     }
+
     .hero-buttons {
-      margin-top: 1.5rem;
-      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
     }
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
+
+    .btn-primary {
+      padding: 0.9rem 1.8rem;
       border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0 0.5rem 0.5rem;
-      border: 1px solid #ff7a1a;
-    }
-    .btn.primary {
+      border: none;
       background: #ff7a1a;
       color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
     }
-    .btn.secondary {
+
+    .btn-secondary {
+      padding: 0.9rem 1.8rem;
+      border-radius: 999px;
+      border: 2px solid #ff7a1a;
       background: #ffffff;
       color: #ff7a1a;
+      font-weight: 600;
+      text-decoration: none;
     }
+
     .section {
-      padding: 3rem 1.5rem;
       max-width: 1000px;
-      margin: 0 auto;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
     }
-    .section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-    .pillars-grid,
-    .featured-grid {
+
+    .what-grid {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.5rem;
+      margin-top: 1.5rem;
     }
-    @media (min-width: 800px) {
-      .pillars-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .featured-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .hero h1 {
-        font-size: 2.8rem;
-      }
-    }
-    .pillar,
-    .featured-item {
-      border: 1px solid #eee;
+
+    .card {
       border-radius: 1rem;
+      border: 1px solid #eee;
       padding: 1.5rem;
-    }
-    .footer {
-      padding: 2rem 1.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-      border-top: 1px solid #eee;
       background: #fafafa;
     }
-    .footer a {
+
+    a {
       color: #ff7a1a;
       text-decoration: none;
-      margin: 0 0.25rem;
     }
+
+    /* navigation */
+    .nav-bar {
+      background: #ffffff;
+      border-bottom: 1px solid #eee;
+      padding: 1rem;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
   </style>
 </head>
+
 <body>
-  <!-- HERO -->
-  <header class="hero">
-    <h1>Engineering the Quality Foundations of Lunar Exploration</h1>
-    <p>Building the research, standards, and tools that make lunar manufacturing safe, reliable, and mission ready.</p>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="nav-bar">
+    <div class="nav-inner">
+      <a href="/" style="color:#ff7a1a;">Home</a>
+      <a href="/about/" style="color:#333;">About</a>
+      <a href="/research/" style="color:#333;">Research</a>
+      <a href="/initiatives/" style="color:#333;">Initiatives</a>
+      <a href="/standards/" style="color:#333;">Standards</a>
+      <a href="/partnerships/" style="color:#333;">Partnerships</a>
+      <a href="/contact/" style="color:#333;">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-title">Engineering the Quality Foundations of Lunar Exploration</div>
+    <p class="hero-subtitle">
+      Building the research, standards, and tools that make lunar manufacturing safe, reliable, and mission ready.
+    </p>
     <div class="hero-buttons">
-      <a href="#research" class="btn primary">Explore Our Research</a>
-      <a href="#contact" class="btn secondary">Partner With LRI</a>
+      <a href="/research/" class="btn-primary">Explore Our Research</a>
+      <a href="/partnerships/" class="btn-secondary">Partner With LRI</a>
     </div>
     <p>
-      Lunar Research Initiative, Inc. is a nonprofit scientific and educational organization focused on the next generation of lunar infrastructure.
+      Lunar Research Initiative is a nonprofit scientific and educational organization focused on the next generation of lunar infrastructure.
     </p>
-  </header>
+  </section>
 
-  <!-- INTRO -->
-  <section class="section" id="about">
+  <section class="section">
     <h2>What is the Lunar Research Initiative</h2>
     <p>
       The Lunar Research Initiative (LRI) develops the scientific foundations that future lunar missions need to build safe and reliable infrastructure on the Moon.
       We combine quality engineering, reliability science, and lunar manufacturing research to create methods that mission planners can trust.
     </p>
-    <p>
-      Our work gives agencies, companies, and universities a clear path to integrate quality and risk into lunar production from the first design sketch through surface operations.
-    </p>
   </section>
 
-  <!-- WHAT WE DO -->
-  <section class="section" id="what-we-do">
-    <h2>What We Do</h2>
-    <div class="pillars-grid">
-      <article class="pillar">
-        <h3>Scientific Research</h3>
-        <p>
-          LRI studies the materials, processes, and environments that control lunar manufacturing performance.
-          We focus on regolith based manufacturing, environmental loads, predictive quality models, and lunar specific critical to quality structures.
-        </p>
-      </article>
-      <article class="pillar">
-        <h3>Technical Standards and Frameworks</h3>
-        <p>
-          We create open frameworks, NASA style technical memoranda, and engineering guides that unify how teams design, qualify, and verify lunar manufacturing systems.
-          Our standards help engineers translate mission requirements into reliable processes.
-        </p>
-      </article>
-      <article class="pillar">
-        <h3>Education and Outreach</h3>
-        <p>
-          LRI shares its work through handbooks, workshops, and public outreach.
-          We support students, early career engineers, and leaders through learning materials and the Ralph Figueroa Quality Brief newsletter.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <!-- FEATURED WORK -->
-  <section class="section" id="research">
-    <h2>Featured Work</h2>
-    <p style="text-align:center;">
-      LRI curates a growing portfolio of open publications and frameworks that support lunar mission planning.
-    </p>
-    <div class="featured-grid">
-      <article class="featured-item">
-        <h3>A Risk Based Quality Architecture for Lunar Production Systems</h3>
-        <p>
-          A foundational framework that organizes quality and risk across mission tiers, from surface assets to integrated lunar production systems.
-        </p>
-      </article>
-      <article class="featured-item">
-        <h3>Unified Lunar Quality Framework (ULQF) Handbook</h3>
-        <p>
-          A practical handbook that connects critical to quality measures, predictive signatures, quality gates, and verification strategies for lunar operations.
-        </p>
-      </article>
-      <article class="featured-item">
-        <h3>Regolith CTQ Capability Reliability Integration</h3>
-        <p>
-          An analytical approach that links regolith properties, process capability, and reliability modeling for lunar manufacturing routes.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <!-- WHY LRI -->
   <section class="section">
-    <h2>Why LRI</h2>
-    <h3 style="text-align:center;">Quality first for lunar infrastructure</h3>
-    <p>
-      Most lunar research focuses on technology performance alone. LRI focuses on quality and reliability from the beginning.
-      We build methods that help teams ask the right questions early and connect them to verification and risk decisions.
-    </p>
-    <p>
-      Our work lowers mission risk, improves manufacturing confidence, and supports a safer long term human presence on the Moon.
-    </p>
-  </section>
-
-  <!-- GET INVOLVED -->
-  <section class="section" id="contact">
-    <h2>Work With the Lunar Research Initiative</h2>
-    <p>
-      LRI collaborates with universities, research centers, and industry partners that want to advance lunar manufacturing science and quality systems.
-      Whether you plan a new study, a student project, or a mission concept, we can help frame quality, risk, and reliability for long term lunar operations.
-    </p>
-    <div class="hero-buttons">
-      <a href="mailto:info@lunarresearchinitiative.org" class="btn primary">Contact LRI</a>
-      <a href="#partnerships" class="btn secondary">View Partnership Options</a>
+    <h2>What We Do</h2>
+    <div class="what-grid">
+      <div class="card">
+        <h3>Quality Architectures</h3>
+        <p>Designing mission tier quality structures that connect requirements, risk, and verification for lunar systems.</p>
+      </div>
+      <div class="card">
+        <h3>Regolith Manufacturing Research</h3>
+        <p>Studying regolith based processes, capability, and reliability for construction and production on the lunar surface.</p>
+      </div>
+      <div class="card">
+        <h3>Predictive Quality</h3>
+        <p>Developing predictive signatures, drift detection, and decision structures for time shifted lunar operations.</p>
+      </div>
+      <div class="card">
+        <h3>Standards and Frameworks</h3>
+        <p>Publishing open frameworks like ULQF that help unify quality practices across lunar missions and organizations.</p>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>Lunar Research Initiative, Inc. · Nonprofit scientific and educational organization</p>
-    <p>
-      © 2025 Lunar Research Initiative, Inc. All rights reserved.
-    </p>
-  </footer>
 </body>
 </html>
