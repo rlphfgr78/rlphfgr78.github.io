@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About - Lunar Research Initiative</title>
+  <title>Lunar Research Initiative - About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Learn about the Lunar Research Initiative mission, vision, values, and research structure.">
+  <meta name="description" content="Mission, vision, values, and leadership of the Lunar Research Initiative.">
 
   <style>
     :root {
@@ -35,9 +35,8 @@
       color: var(--lri-text);
     }
 
-    p {
+    p, li {
       color: var(--lri-muted);
-      margin: 0 0 0.75rem 0;
     }
 
     a {
@@ -50,6 +49,7 @@
       color: var(--lri-orange-dark);
     }
 
+    /* Navigation with logo slot */
     .nav-bar {
       background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid var(--lri-border);
@@ -64,58 +64,71 @@
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
       flex-wrap: wrap;
       font-size: 0.95rem;
       font-weight: 600;
     }
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-}
 
-.nav-logo-mark {
-  width: 32px;
-  height: 32px;
-  border-radius: 999px;
-  border: 2px solid var(--lri-orange);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-}
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+    }
 
-.nav-logo-text {
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+    .nav-logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 2px solid var(--lri-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  align-items: center;
-}
+    .nav-logo-text {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 
-.nav-links a {
-  color: var(--lri-text);
-  text-decoration: none;
-}
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
-.nav-links a:hover {
-  color: var(--lri-orange);
-  text-decoration: none;
-}
+    .nav-links a {
+      color: var(--lri-text);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--lri-orange);
+      text-decoration: none;
+    }
 
     .section {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+    }
+
+    .values-list {
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    .values-list li {
+      margin-bottom: 0.75rem;
     }
 
     footer {
@@ -132,59 +145,62 @@
 <body>
 
   <nav class="nav-bar">
-  <div class="nav-inner">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="nav-logo-mark">LRI</span>
+        <span class="nav-logo-text">LUNAR RESEARCH INITIATIVE</span>
+      </div>
 
-    <div class="nav-logo">
-      <span class="nav-logo-mark">LRI</span>
-      <span class="nav-logo-text">Lunar Research Initiative</span>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/research/">Research</a>
+        <a href="/initiatives/">Initiatives</a>
+        <a href="/standards/">Standards</a>
+        <a href="/partnerships/">Partnerships</a>
+        <a href="/contact/">Contact</a>
+      </div>
     </div>
+  </nav>
 
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/research/">Research</a>
-      <a href="/initiatives/">Initiatives</a>
-      <a href="/standards/">Standards</a>
-      <a href="/partnerships/">Partnerships</a>
-      <a href="/contact/">Contact</a>
-    </div>
+  <section class="section">
+    <h1>About the Lunar Research Initiative</h1>
+  </section>
 
-  </div>
-</nav>
-
-
-  <h1>About the Lunar Research Initiative</h1>
-
-  <div class="section">
+  <section class="section">
     <h2>Our Mission</h2>
     <p>
       The Lunar Research Initiative (LRI) advances scientific knowledge and public understanding of lunar surface manufacturing.
       We develop models, tools, and standards that improve the quality, reliability, and safety of lunar operations.
     </p>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="section">
     <h2>Our Vision</h2>
     <p>
       LRI envisions a lunar economy supported by transparent quality frameworks, validated manufacturing methods, and data driven decision structures.
     </p>
-  </div>
+  </section>
 
-  <div class="section">
+  <section class="section">
     <h2>Our Values</h2>
-    <p><strong>Scientific rigor:</strong> Evidence based methods and transparent reasoning.</p>
-    <p><strong>Public benefit:</strong> Support for responsible and safe exploration.</p>
-    <p><strong>Open access:</strong> Sharing frameworks and tools with the research community.</p>
-    <p><strong>Mission safety:</strong> Reliability and risk awareness in every recommendation.</p>
-    <p><strong>Education:</strong> Support for future lunar professionals.</p>
-  </div>
+    <ul class="values-list">
+      <li><strong>Scientific rigor:</strong> Evidence based methods and transparent reasoning.</li>
+      <li><strong>Public benefit:</strong> Support for responsible and safe exploration.</li>
+      <li><strong>Open access:</strong> Sharing frameworks and tools with the research community.</li>
+      <li><strong>Mission safety:</strong> Reliability and risk awareness in every recommendation.</li>
+      <li><strong>Education:</strong> Support for future lunar professionals.</li>
+    </ul>
+  </section>
 
-  <div class="section">
+  <section class="section">
     <h2>Leadership</h2>
     <p><strong>Ralph Figueroa, MS Space Studies</strong><br>
-    Founder and Principal Investigator<br>
-    Author of "The Moon - Our Celestial Neighbor" and creator of the ULQF technical series.</p>
-  </div>
+    Founder and Principal Investigator</p>
+    <p>
+      Ralph leads the development of LRI quality frameworks, regolith manufacturing research, and predictive quality architectures for lunar surface operations.
+    </p>
+  </section>
 
   <footer>
     © 2025 Lunar Research Initiative. All rights reserved.
