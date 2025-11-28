@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Partnerships - Lunar Research Initiative</title>
+  <title>Lunar Research Initiative - Partnerships</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How universities, companies, and agencies can collaborate with the Lunar Research Initiative.">
+  <meta name="description" content="Partnership opportunities with the Lunar Research Initiative.">
 
   <style>
     :root {
@@ -29,7 +29,7 @@
       line-height: 1.6;
     }
 
-    h1, h2 {
+    h1, h2, h3 {
       text-align: center;
       margin-top: 0;
       color: var(--lri-text);
@@ -37,7 +37,6 @@
 
     p {
       color: var(--lri-muted);
-      margin: 0 0 0.75rem 0;
     }
 
     a {
@@ -50,6 +49,7 @@
       color: var(--lri-orange-dark);
     }
 
+    /* Navigation with logo slot */
     .nav-bar {
       background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid var(--lri-border);
@@ -64,11 +64,54 @@
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
       flex-wrap: wrap;
       font-size: 0.95rem;
       font-weight: 600;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+    }
+
+    .nav-logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 2px solid var(--lri-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-logo-text {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--lri-text);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--lri-orange);
+      text-decoration: none;
     }
 
     .section {
@@ -77,8 +120,18 @@
       padding: 0 1.5rem;
     }
 
-    ul {
-      padding-left: 1.2rem;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      border-radius: 1rem;
+      border: 1px solid var(--lri-border);
+      padding: 1.5rem;
+      background: #fafafa;
     }
 
     footer {
@@ -94,38 +147,69 @@
 
 <body>
 
-    <h1>Partnerships</h1>
+  <nav class="nav-bar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="nav-logo-mark">LRI</span>
+        <span class="nav-logo-text">LUNAR RESEARCH INITIATIVE</span>
+      </div>
 
-  <div class="section">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/research/">Research</a>
+        <a href="/initiatives/">Initiatives</a>
+        <a href="/standards/">Standards</a>
+        <a href="/partnerships/">Partnerships</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <h1>Partnerships With LRI</h1>
     <p>
-      The Lunar Research Initiative collaborates with universities, companies, and agencies that are working to advance lunar manufacturing, quality systems, and surface infrastructure.
+      LRI works with agencies, companies, universities, and independent researchers who share an interest in the quality and reliability of lunar surface operations.
+      Partnerships focus on practical results that improve mission readiness and reduce risk.
     </p>
-  </div>
 
-  <div class="section">
-    <h2>Why Partner With LRI</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Space Agencies and Programs</h3>
+        <p>
+          Collaboration on quality frameworks, regolith manufacturing standards, and verification strategies for lunar infrastructure projects.
+          LRI provides independent analysis and technical memoranda that programs can adapt into their internal documentation.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Industry Partners</h3>
+        <p>
+          Engagement with companies developing lunar construction systems, materials, and support equipment.
+          Joint work can include process capability studies, CTQ development, and predictive quality architectures for product lines.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Universities and Students</h3>
+        <p>
+          Opportunities for graduate and undergraduate projects that connect academic research with real quality problems in lunar manufacturing.
+          LRI can support thesis topics, design projects, and shared datasets.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Starting a Conversation</h2>
     <p>
-      LRI contributes quality engineering, risk modeling, regolith manufacturing insight, and NASA style documentation to collaborative projects.
+      To explore a partnership, share a short summary of your mission concept, technology, or research area and describe how you would use lunar quality frameworks.
+      LRI will respond with potential collaboration paths or suggestions for next steps.
     </p>
-  </div>
-
-  <div class="section">
-    <h2>Types of Partnerships</h2>
-    <ul>
-      <li>Research collaboration on lunar manufacturing and quality methods.</li>
-      <li>Support for student and academic projects.</li>
-      <li>Technical advisory on quality and risk structures for space hardware.</li>
-      <li>Co development of standards and CTQ libraries.</li>
-      <li>Mission concept support focused on quality and reliability.</li>
-    </ul>
-  </div>
-
-  <div class="section" style="text-align:center;">
     <p>
-      Contact LRI about partnerships:
-      <a href="mailto:info@lunarresearchinitiative.org">info@lunarresearchinitiative.org</a>
+      See the <a href="/contact/">Contact page</a> for email details.
     </p>
-  </div>
+  </section>
 
   <footer>
     © 2025 Lunar Research Initiative. All rights reserved.
