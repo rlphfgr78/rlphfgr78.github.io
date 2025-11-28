@@ -70,9 +70,8 @@ a:hover {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
 }
+
 .lri-logo {
   height: 64px;
   width: auto;
