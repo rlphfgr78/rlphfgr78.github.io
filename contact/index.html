@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact - Lunar Research Initiative</title>
+  <title>Lunar Research Initiative - Contact</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contact the Lunar Research Initiative for research collaboration, partnerships, and general questions.">
+  <meta name="description" content="Contact the Lunar Research Initiative.">
 
   <style>
     :root {
@@ -37,7 +37,6 @@
 
     p {
       color: var(--lri-muted);
-      margin: 0 0 0.75rem 0;
     }
 
     a {
@@ -50,6 +49,7 @@
       color: var(--lri-orange-dark);
     }
 
+    /* Navigation with logo slot */
     .nav-bar {
       background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid var(--lri-border);
@@ -64,11 +64,54 @@
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
       flex-wrap: wrap;
       font-size: 0.95rem;
       font-weight: 600;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+    }
+
+    .nav-logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 2px solid var(--lri-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-logo-text {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--lri-text);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--lri-orange);
+      text-decoration: none;
     }
 
     .section {
@@ -77,12 +120,11 @@
       padding: 0 1.5rem;
     }
 
-    .contact-box {
+    .contact-card {
       border-radius: 1rem;
       border: 1px solid var(--lri-border);
-      padding: 1.5rem;
+      padding: 1.75rem;
       background: #fafafa;
-      margin-bottom: 1.5rem;
     }
 
     footer {
@@ -98,27 +140,54 @@
 
 <body>
 
+  <nav class="nav-bar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="nav-logo-mark">LRI</span>
+        <span class="nav-logo-text">LUNAR RESEARCH INITIATIVE</span>
+      </div>
 
-  <h1>Contact the Lunar Research Initiative</h1>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/research/">Research</a>
+        <a href="/initiatives/">Initiatives</a>
+        <a href="/standards/">Standards</a>
+        <a href="/partnerships/">Partnerships</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-  <div class="section">
-    <div class="contact-box">
-      <h2>Email</h2>
+  <section class="section">
+    <h1>Contact LRI</h1>
+    <div class="contact-card">
+      <h2>General Inquiries</h2>
       <p>
-        For general questions, research inquiries, or collaboration ideas, email:
+        For questions about research, partnerships, or standards, contact:
       </p>
-      <p style="font-size:1.2rem; font-weight:600; text-align:center;">
-        <a href="mailto:info@lunarresearchinitiative.org">info@lunarresearchinitiative.org</a>
+      <p>
+        <strong>Ralph Figueroa</strong><br>
+        Founder and Principal Investigator<br>
+        Email:
+        <a href="mailto:rlphfgr@yahoo.com">rlphfgr@yahoo.com</a>
+      </p>
+
+      <h2>How You Can Use This Channel</h2>
+      <p>
+        You can reach out to:
+      </p>
+      <ul>
+        <li>Discuss potential collaboration or joint studies.</li>
+        <li>Request a briefing on LRI frameworks for your team.</li>
+        <li>Share data or results related to lunar manufacturing and quality.</li>
+        <li>Ask about future publications and standards work.</li>
+      </ul>
+      <p>
+        Please include a short description of your project or question so the response can focus on the most relevant information.
       </p>
     </div>
-  </div>
-
-  <div class="section">
-    <h2>Research and Collaboration</h2>
-    <p>
-      Include a short description of your project, goals, and timeline so we can respond with the best path forward.
-    </p>
-  </div>
+  </section>
 
   <footer>
     © 2025 Lunar Research Initiative. All rights reserved.
