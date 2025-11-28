@@ -81,13 +81,7 @@ a:hover {
 }
 
 /* Desktop size */
-.lri-logo {
-  height: 72px;
-  width: auto;
-  display: block;
-}
-
-/* Subtle fade hover effect */
+/* LRI Logo (Desktop) */
 .lri-logo {
   height: 72px;
   width: auto;
@@ -98,7 +92,6 @@ a:hover {
 .lri-logo:hover {
   opacity: 0.75;
 }
-
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .nav-logo {
