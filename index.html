@@ -5,34 +5,98 @@
   <title>Lunar Research Initiative - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The Lunar Research Initiative develops the quality, reliability, and manufacturing frameworks for future lunar missions.">
+
   <style>
+    :root {
+      --lri-bg: #ffffff;
+      --lri-bg-soft: #fff7f0;
+      --lri-orange: #ff7a1a;
+      --lri-orange-dark: #e56710;
+      --lri-text: #111111;
+      --lri-muted: #555555;
+      --lri-border: #eeeeee;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #ffffff;
-      color: #111111;
+      background: var(--lri-bg);
+      color: var(--lri-text);
       line-height: 1.6;
     }
 
     h1, h2, h3 {
       text-align: center;
+      margin-top: 0;
+      color: var(--lri-text);
     }
 
+    p {
+      color: var(--lri-muted);
+      margin: 0 0 0.75rem 0;
+    }
+
+    a {
+      color: var(--lri-orange);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--lri-orange-dark);
+    }
+
+    /* Navigation */
+    .nav-bar {
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid var(--lri-border);
+      padding: 0.75rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    /* Layout */
+    .section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Hero */
     .hero {
       text-align: center;
-      padding: 5rem 1.5rem 3rem 1.5rem;
+      padding: 4.5rem 1.5rem 3rem 1.5rem;
+      background: radial-gradient(circle at top, var(--lri-bg-soft), #ffffff 55%);
     }
 
     .hero-title {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       font-weight: 800;
       margin-bottom: 1rem;
     }
 
     .hero-subtitle {
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto 2rem auto;
       font-size: 1rem;
+      color: var(--lri-muted);
     }
 
     .hero-buttons {
@@ -47,26 +111,41 @@
       padding: 0.9rem 1.8rem;
       border-radius: 999px;
       border: none;
-      background: #ff7a1a;
+      background: var(--lri-orange);
       color: #ffffff;
       font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--lri-orange-dark);
       text-decoration: none;
     }
 
     .btn-secondary {
       padding: 0.9rem 1.8rem;
       border-radius: 999px;
-      border: 2px solid #ff7a1a;
+      border: 2px solid var(--lri-orange);
       background: #ffffff;
-      color: #ff7a1a;
+      color: var(--lri-orange);
       font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover {
+      background: var(--lri-bg-soft);
       text-decoration: none;
     }
 
-    .section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
+    /* Cards */
+    .card {
+      border-radius: 1rem;
+      border: 1px solid var(--lri-border);
+      padding: 1.5rem;
+      background: #fafafa;
+      margin-bottom: 1.5rem;
     }
 
     .what-grid {
@@ -76,51 +155,28 @@
       margin-top: 1.5rem;
     }
 
-    .card {
-      border-radius: 1rem;
-      border: 1px solid #eee;
-      padding: 1.5rem;
-      background: #fafafa;
+    footer {
+      margin-top: 3rem;
+      padding: 1.5rem 1rem;
+      border-top: 1px solid var(--lri-border);
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--lri-muted);
     }
-
-    a {
-      color: #ff7a1a;
-      text-decoration: none;
-    }
-
-    /* navigation */
-    .nav-bar {
-      background: #ffffff;
-      border-bottom: 1px solid #eee;
-      padding: 1rem;
-    }
-
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
   </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION BAR -->
   <nav class="nav-bar">
     <div class="nav-inner">
-      <a href="/" style="color:#ff7a1a;">Home</a>
-      <a href="/about/" style="color:#333;">About</a>
-      <a href="/research/" style="color:#333;">Research</a>
-      <a href="/initiatives/" style="color:#333;">Initiatives</a>
-      <a href="/standards/" style="color:#333;">Standards</a>
-      <a href="/partnerships/" style="color:#333;">Partnerships</a>
-      <a href="/contact/" style="color:#333;">Contact</a>
+      <a href="/" style="color:var(--lri-orange);">Home</a>
+      <a href="/about/">About</a>
+      <a href="/research/">Research</a>
+      <a href="/initiatives/">Initiatives</a>
+      <a href="/standards/">Standards</a>
+      <a href="/partnerships/">Partnerships</a>
+      <a href="/contact/">Contact</a>
     </div>
   </nav>
 
@@ -167,6 +223,10 @@
       </div>
     </div>
   </section>
+
+  <footer>
+    © 2025 Lunar Research Initiative. All rights reserved.
+  </footer>
 
 </body>
 </html>
