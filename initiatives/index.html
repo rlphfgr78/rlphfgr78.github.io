@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Initiatives - Lunar Research Initiative</title>
+  <title>Lunar Research Initiative - Initiatives</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Core research and development initiatives of the Lunar Research Initiative.">
+  <meta name="description" content="Current research initiatives and focus areas for lunar manufacturing quality.">
 
   <style>
     :root {
@@ -29,7 +29,7 @@
       line-height: 1.6;
     }
 
-    h1, h2 {
+    h1, h2, h3 {
       text-align: center;
       margin-top: 0;
       color: var(--lri-text);
@@ -37,7 +37,6 @@
 
     p {
       color: var(--lri-muted);
-      margin: 0 0 0.75rem 0;
     }
 
     a {
@@ -50,6 +49,7 @@
       color: var(--lri-orange-dark);
     }
 
+    /* Navigation with logo slot */
     .nav-bar {
       background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid var(--lri-border);
@@ -64,11 +64,54 @@
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
       flex-wrap: wrap;
       font-size: 0.95rem;
       font-weight: 600;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+    }
+
+    .nav-logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 2px solid var(--lri-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-logo-text {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--lri-text);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--lri-orange);
+      text-decoration: none;
     }
 
     .section {
@@ -77,12 +120,18 @@
       padding: 0 1.5rem;
     }
 
-    .initiative-box {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
       border-radius: 1rem;
       border: 1px solid var(--lri-border);
       padding: 1.5rem;
       background: #fafafa;
-      margin-bottom: 1.5rem;
     }
 
     footer {
@@ -98,37 +147,66 @@
 
 <body>
 
-  <h1>LRI Research Initiatives</h1>
+  <nav class="nav-bar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="nav-logo-mark">LRI</span>
+        <span class="nav-logo-text">LUNAR RESEARCH INITIATIVE</span>
+      </div>
 
-  <div class="section">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/research/">Research</a>
+        <a href="/initiatives/">Initiatives</a>
+        <a href="/standards/">Standards</a>
+        <a href="/partnerships/">Partnerships</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <h1>LRI Research Initiatives</h1>
     <p>
-      LRI organizes its scientific work into four core program areas that support lunar manufacturing quality, predictive modeling, and regolith based production.
+      LRI focuses on a small set of initiatives that build a practical quality foundation for lunar infrastructure.
+      Each initiative links theory, models, and standards to engineering decisions that mission planners must make.
     </p>
-  </div>
 
-  <div class="section">
+    <div class="grid">
+      <div class="card">
+        <h3>Predictive Quality Architectures</h3>
+        <p>
+          Designing architectures that connect critical to quality measures, predictive signatures, and verification logic across lunar missions.
+          This initiative develops tools that help teams detect drift early and maintain requirement integrity under harsh conditions.
+        </p>
+      </div>
 
-    <div class="initiative-box">
-      <h2>Lunar Manufacturing Quality Architecture</h2>
-      <p>Defines mission tier quality systems and risk structures for surface infrastructure.</p>
+      <div class="card">
+        <h3>Regolith Manufacturing Methods</h3>
+        <p>
+          Studying the behavior of regolith based processes, including feedstock variability, process capability, and equipment reliability.
+          The work aims to translate regolith uncertainty into clear quality requirements and qualification methods.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Operations Under Delay</h3>
+        <p>
+          Investigating decision loops for time delayed operations on the Moon.
+          This initiative explores how monitoring, autonomy, and ground teams share responsibility when communications lag affects safety and quality.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="initiative-box">
-      <h2>Regolith Manufacturing Systems</h2>
-      <p>Studies regolith feedstock, mechanical behavior, process capability, and reliability for lunar routes.</p>
-    </div>
-
-    <div class="initiative-box">
-      <h2>Predictive Quality and Decision Support</h2>
-      <p>Develops predictive signatures, drift detection, and time shifted decision logic for lunar operations.</p>
-    </div>
-
-    <div class="initiative-box">
-      <h2>Lunar Standards and Verification</h2>
-      <p>Creates open frameworks, CTQ libraries, and verification structures for lunar production systems.</p>
-    </div>
-
-  </div>
+  <section class="section">
+    <h2>Opportunities for Collaboration</h2>
+    <p>
+      LRI welcomes collaboration with universities, research institutes, and industry teams that are exploring lunar manufacturing technologies.
+      Potential collaborations include joint studies, data sharing, student projects, and aligned standards development.
+    </p>
+  </section>
 
   <footer>
     © 2025 Lunar Research Initiative. All rights reserved.
