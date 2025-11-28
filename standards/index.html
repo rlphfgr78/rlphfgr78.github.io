@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Standards and Frameworks - Lunar Research Initiative</title>
+  <title>Lunar Research Initiative - Standards and Frameworks</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Technical standards and quality frameworks developed by the Lunar Research Initiative for lunar manufacturing and surface operations.">
+  <meta name="description" content="Technical standards and quality frameworks for lunar manufacturing.">
 
   <style>
     :root {
@@ -29,7 +29,7 @@
       line-height: 1.6;
     }
 
-    h1, h2, h3 {
+    h1, h2 {
       text-align: center;
       margin-top: 0;
       color: var(--lri-text);
@@ -37,7 +37,6 @@
 
     p {
       color: var(--lri-muted);
-      margin: 0 0 0.75rem 0;
     }
 
     a {
@@ -50,6 +49,7 @@
       color: var(--lri-orange-dark);
     }
 
+    /* Navigation with logo slot */
     .nav-bar {
       background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid var(--lri-border);
@@ -64,11 +64,54 @@
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
       flex-wrap: wrap;
       font-size: 0.95rem;
       font-weight: 600;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+    }
+
+    .nav-logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 2px solid var(--lri-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-logo-text {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--lri-text);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--lri-orange);
+      text-decoration: none;
     }
 
     .section {
@@ -78,10 +121,10 @@
     }
 
     .framework-box {
-      border-radius: 1rem;
       border: 1px solid var(--lri-border);
-      padding: 1.5rem;
+      border-radius: 1rem;
       background: #fafafa;
+      padding: 1.5rem;
       margin-bottom: 1.5rem;
     }
 
@@ -98,26 +141,40 @@
 
 <body>
 
-    <h1 style="margin-top:2rem;">Standards and Frameworks</h1>
+  <nav class="nav-bar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="nav-logo-mark">LRI</span>
+        <span class="nav-logo-text">LUNAR RESEARCH INITIATIVE</span>
+      </div>
 
-  <div class="section">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/research/">Research</a>
+        <a href="/initiatives/">Initiatives</a>
+        <a href="/standards/">Standards</a>
+        <a href="/partnerships/">Partnerships</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <h1>Standards and Frameworks</h1>
     <p>
       The Lunar Research Initiative develops independent, open frameworks that help unify lunar manufacturing practices.
       These standards connect mission requirements to practical design, qualification, and verification methods for lunar surface operations.
     </p>
-  </div>
+  </section>
 
-  <div class="section">
-
+  <section class="section">
     <div class="framework-box">
       <h2>Unified Lunar Quality Framework (ULQF)</h2>
       <p>
         ULQF is a structured quality framework for lunar surface manufacturing.
         It links critical to quality measures, predictive signatures, environmental modifiers, and quality gates across mission phases.
         ULQF helps engineers control variation, interpret drift, and design verification plans that reflect real lunar risks.
-      </p>
-      <p>
-        ULQF includes a handbook, implementation guide, and supporting tools such as CTQ libraries and predictive signature tables.
       </p>
     </div>
 
@@ -127,9 +184,6 @@
         The Lunar Manufacturing Quality Architecture defines how quality and risk align across mission tiers, from individual processes to integrated surface systems.
         It provides a consistent logic that connects requirements, risk controls, and verification activities into a single architecture.
       </p>
-      <p>
-        This framework supports mission architects, systems engineers, and manufacturing leads who need a clear quality structure for lunar infrastructure projects.
-      </p>
     </div>
 
     <div class="framework-box">
@@ -138,31 +192,24 @@
         These emerging standards describe expectations for regolith feedstock characterization, process capability, and equipment behavior under lunar conditions.
         The goal is to translate regolith variability into predictable, capable manufacturing routes.
       </p>
-      <p>
-        The standards guide material preparation, mechanical testing, process qualification, and monitoring strategies for regolith based production.
-      </p>
     </div>
 
     <div class="framework-box">
       <h2>Verification and Validation Frameworks</h2>
       <p>
         LRI develops verification templates and logic flows for lunar production systems.
-        These frameworks map risks and CTQs to test plans, environmental exposures, and acceptance criteria.
-      </p>
-      <p>
-        They support consistent, evidence based verification across additive manufacturing, construction systems, utilities, and support equipment on the lunar surface.
+        These frameworks map risks and critical to quality measures to test plans, environmental exposures, and acceptance criteria.
       </p>
     </div>
+  </section>
 
-  </div>
-
-  <div class="section">
+  <section class="section">
     <h2>Technical Memoranda and Templates</h2>
     <p>
-      LRI publishes NASA style technical memoranda that formalize specific methods, such as drift detection algorithms, load modifier models, or verification checklists.
-      Future releases will also include example CTQ lists, quality gate diagrams, and verification matrices that organizations can adapt for their own lunar projects.
+      LRI publishes NASA style technical memoranda that formalize specific methods, such as drift detection algorithms, load modifier models, and verification checklists.
+      Future releases will include example CTQ lists, quality gate diagrams, and verification matrices that organizations can adapt for their own lunar projects.
     </p>
-  </div>
+  </section>
 
   <footer>
     © 2025 Lunar Research Initiative. All rights reserved.
