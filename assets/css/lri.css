@@ -87,6 +87,18 @@ a:hover {
   display: block;
 }
 
+/* Subtle fade hover effect */
+.lri-logo {
+  height: 72px;
+  width: auto;
+  display: block;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.lri-logo:hover {
+  opacity: 0.75;
+}
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .nav-logo {
