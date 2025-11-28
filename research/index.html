@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Research Library - Lunar Research Initiative</title>
+  <title>Lunar Research Initiative - Research Library</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Open research library for lunar manufacturing quality, reliability, and standards from the Lunar Research Initiative.">
+  <meta name="description" content="Open research library for lunar quality, reliability, and manufacturing standards.">
 
   <style>
     :root {
@@ -30,7 +30,7 @@
     }
 
     h1, h2, h3 {
-      text-align: center;
+      text-align: left;
       margin-top: 0;
       color: var(--lri-text);
     }
@@ -50,6 +50,7 @@
       color: var(--lri-orange-dark);
     }
 
+    /* Navigation with logo slot */
     .nav-bar {
       background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid var(--lri-border);
@@ -64,21 +65,83 @@
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      justify-content: center;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
       flex-wrap: wrap;
       font-size: 0.95rem;
       font-weight: 600;
     }
 
-    .section {
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+    }
+
+    .nav-logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 2px solid var(--lri-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-logo-text {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--lri-text);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--lri-orange);
+      text-decoration: none;
+    }
+
+    .page-wrap {
       max-width: 1000px;
       margin: 2rem auto;
-      padding: 0 1.5rem;
+      padding: 0 1.5rem 2.5rem 1.5rem;
+    }
+
+    .section-block {
+      margin-bottom: 2rem;
+    }
+
+    .pub-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .pub-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pub-list li {
+      margin-bottom: 1.25rem;
     }
 
     footer {
-      margin-top: 3rem;
+      margin-top: 1rem;
       padding: 1.5rem 1rem;
       border-top: 1px solid var(--lri-border);
       text-align: center;
@@ -90,38 +153,87 @@
 
 <body>
 
-  
-  <h1>Research Library</h1>
+  <nav class="nav-bar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="nav-logo-mark">LRI</span>
+        <span class="nav-logo-text">LUNAR RESEARCH INITIATIVE</span>
+      </div>
 
-  <div class="section">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/research/">Research</a>
+        <a href="/initiatives/">Initiatives</a>
+        <a href="/standards/">Standards</a>
+        <a href="/partnerships/">Partnerships</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+    <h1>Research Library</h1>
     <p>
       The Lunar Research Initiative maintains an open research library dedicated to the science, engineering, and quality systems needed for safe and reliable lunar manufacturing.
       Our publications support mission planners, researchers, and industry teams working to develop lunar surface infrastructure.
     </p>
-  </div>
 
-  <div class="section">
-    <h2>Featured Publications</h2>
+    <div class="section-block">
+      <h2>Featured Publications</h2>
+      <ul class="pub-list">
+        <li>
+          <div class="pub-title">A Risk Based Quality Architecture for Lunar Production Systems</div>
+          <p>
+            A foundational framework that organizes quality and risk across lunar mission tiers. The architecture connects mission requirements, critical to quality measures, verification gates, and operational risk pathways into a unified structure.
+          </p>
+        </li>
+        <li>
+          <div class="pub-title">Unified Lunar Quality Framework (ULQF) Handbook</div>
+          <p>
+            A comprehensive guide that links critical to quality measures, predictive signatures, environmental modifiers, and quality gates for lunar surface manufacturing.
+            ULQF helps engineers control variation, interpret drift, and manage verification in extreme lunar conditions.
+          </p>
+        </li>
+        <li>
+          <div class="pub-title">Regolith CTQ Capability Reliability Integration</div>
+          <p>
+            A technical exploration of how regolith properties, process capability indices, and reliability models integrate into a coherent production strategy.
+            This work strengthens the bridge between lunar materials science and practical manufacturing design.
+          </p>
+        </li>
+        <li>
+          <div class="pub-title">Delay Driven Decision Loops in Lunar Surface Operations</div>
+          <p>
+            A study of decision making under communication delay. This publication explains how operators, autonomous systems, and lunar environmental factors interact inside time shifted loops and provides engineering controls to maintain safe behavior.
+          </p>
+        </li>
+      </ul>
+    </div>
 
-    <h3>A Risk Based Quality Architecture for Lunar Production Systems</h3>
-    <p>
-      A foundational framework that organizes quality and risk across lunar mission tiers and connects mission requirements, critical to quality measures, verification gates, and risk pathways.
-    </p>
+    <div class="section-block">
+      <h2>Technical Memoranda and Reports</h2>
+      <p>
+        LRI issues NASA style technical memoranda to formalize methods and provide precise, engineering grade documentation.
+        Current and planned memoranda cover predictive quality structures, environmental load modifiers, verification logic for lunar additive manufacturing, and drift detection methods for lunar equipment.
+      </p>
+    </div>
 
-    <h3>Unified Lunar Quality Framework (ULQF) Handbook</h3>
-    <p>
-      A comprehensive guide that links critical to quality measures, predictive signatures, environmental modifiers, and quality gates for lunar surface manufacturing.
-    </p>
-
-    <h3>Regolith CTQ Capability Reliability Integration</h3>
-    <p>
-      A technical exploration of how regolith properties, process capability indices, and reliability models integrate into a coherent production strategy.
-    </p>
-
-    <h3>Delay Driven Decision Loops in Lunar Surface Operations</h3>
-    <p>
-      A study of decision making under communication delay and the controls needed to keep operations safe and predictable.
-    </p>
+    <div class="section-block">
+      <h2>Standards and Frameworks</h2>
+      <p>
+        LRI develops open frameworks that support consistent lunar manufacturing practices, including:
+      </p>
+      <ul>
+        <li>Unified Lunar Quality Framework (ULQF).</li>
+        <li>Lunar Manufacturing Quality Architecture.</li>
+        <li>Regolith manufacturing process standards.</li>
+        <li>Verification and validation frameworks for lunar production systems.</li>
+      </ul>
+      <p>
+        New work will be added to this library as studies, handbooks, and technical memoranda are released.
+      </p>
+    </div>
   </div>
 
   <footer>
