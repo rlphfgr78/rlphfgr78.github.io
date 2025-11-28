@@ -73,6 +73,11 @@ a:hover {
   gap: 0.5rem;
   font-weight: 700;
 }
+.lri-logo {
+  height: 42px;
+  width: auto;
+  display: block;
+}
 
 .nav-logo-mark {
   width: 32px;
