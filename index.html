@@ -51,26 +51,71 @@
     }
 
     /* Navigation */
-    .nav-bar {
-      background: rgba(255, 255, 255, 0.95);
-      border-bottom: 1px solid var(--lri-border);
-      padding: 0.75rem 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(8px);
-    }
+      /* Navigation with logo slot */
+  .nav-bar {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--lri-border);
+    padding: 0.75rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
 
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+  }
+
+  .nav-logo-mark {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 2px solid var(--lri-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-logo-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--lri-text);
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    color: var(--lri-orange);
+    text-decoration: none;
+  }
+
 
     /* Layout */
     .section {
@@ -169,8 +214,18 @@
 <body>
 
   <nav class="nav-bar">
-    <div class="nav-inner">
-      <a href="/" style="color:var(--lri-orange);">Home</a>
+  <div class="nav-inner">
+
+    <!-- ▼▼▼ LOGO SLOT (you can replace this with an <img> later) ▼▼▼ -->
+    <div class="nav-logo">
+      <span class="nav-logo-mark">LRI</span>
+      <span class="nav-logo-text">Lunar Research Initiative</span>
+    </div>
+    <!-- ▲▲▲ LOGO AREA ▲▲▲ -->
+
+    <!-- ▼▼▼ NAVIGATION LINKS ▼▼▼ -->
+    <div class="nav-links">
+      <a href="/">Home</a>
       <a href="/about/">About</a>
       <a href="/research/">Research</a>
       <a href="/initiatives/">Initiatives</a>
@@ -178,7 +233,11 @@
       <a href="/partnerships/">Partnerships</a>
       <a href="/contact/">Contact</a>
     </div>
-  </nav>
+    <!-- ▲▲▲ END NAV LINKS ▲▲▲ -->
+
+  </div>
+</nav>
+
 
   <section class="hero">
     <div class="hero-title">Engineering the Quality Foundations of Lunar Exploration</div>
